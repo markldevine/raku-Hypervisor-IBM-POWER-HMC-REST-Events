@@ -1,7 +1,14 @@
 need    Hypervisor::IBM::POWER::HMC::REST::Atom;
 need    Hypervisor::IBM::POWER::HMC::REST::Config;
+need    Hypervisor::IBM::POWER::HMC::REST::Config::Analyze;
+need    Hypervisor::IBM::POWER::HMC::REST::Config::Dump;
+need    Hypervisor::IBM::POWER::HMC::REST::Config::Optimize;
+use     Hypervisor::IBM::POWER::HMC::REST::Config::Traits;
 need    Hypervisor::IBM::POWER::HMC::REST::ETL::XML;
 unit    class Hypervisor::IBM::POWER::HMC::REST::Events::Event:api<1>:auth<Mark Devine (mark@markdevine.com)>
+            does Hypervisor::IBM::POWER::HMC::REST::Config::Analyze
+            does Hypervisor::IBM::POWER::HMC::REST::Config::Dump
+            does Hypervisor::IBM::POWER::HMC::REST::Config::Optimize
             does Hypervisor::IBM::POWER::HMC::REST::ETL::XML;
 
 has     Hypervisor::IBM::POWER::HMC::REST::Config   $.config is required;
