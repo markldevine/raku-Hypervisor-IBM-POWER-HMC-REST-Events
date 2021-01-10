@@ -5,7 +5,6 @@
         "Hypervisor::IBM::POWER::HMC::REST::Atom",
         "Hypervisor::IBM::POWER::HMC::REST::Config",
         "Hypervisor::IBM::POWER::HMC::REST::ETL",
-        "LibXML",
         "URI"
     ],
     "description":  "IBM POWER HMC REST API - Events",
